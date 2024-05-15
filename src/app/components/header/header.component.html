@@ -16,25 +16,32 @@
   </div>
 
   <div 
-    class="header_nav--premium" (click)="modalService.open()">
+    class="header_nav--premium" 
+    (click)="modalService.open()">
     Explore premium
   </div>
 
   <div class="header_navbar">
     <div 
-      class="header_navbar--settings" (click)="modalService.open()">
+      class="header_navbar--settings" 
+      (click)="modalService.open()">
     </div>
 
     <div 
-      class="header_navbar--notifications" (click)="modalService.open()">
+      class="header_navbar--notifications" 
+      (click)="modalService.open()">
     </div>
 
     <div 
-      class="header_navbar--profile" routerLink="/profile">
+      class="header_navbar--profile" 
+      routerLink="/profile"
+      (click)="stop()"
+      >
     </div>
 
     <div 
-      class="header_navbar--options" (click)="modalService.open()">
+      class="header_navbar--options" 
+      (click)="modalService.open()">
     </div>
   </div>
 </div>

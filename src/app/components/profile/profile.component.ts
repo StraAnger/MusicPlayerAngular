@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-profile',
@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './profile.component.less'
 })
 export class ProfileComponent {
-  
+
   protected isPremium: boolean = false;
 
 }
