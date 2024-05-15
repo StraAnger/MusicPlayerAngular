@@ -26,24 +26,29 @@
     />
 
     <div 
-      class="progressbar--timer" *ngIf="currentAudio.duration">
+      *ngIf="currentAudio.duration"
+      class="progressbar--timer" >
       <p>
         {{ currentDurationFormated(currentAudio) }}
       </p>
     </div>
 
     <div 
-      class="progressbar_nav--options" (click)="modalService.open()">
+      class="progressbar_nav--options" 
+      (click)="modalService.open()">
     </div>
 
     <div 
-      *ngIf="currentAudio.muted" class="progressbar_nav--volume-off" 
+      *ngIf="currentAudio.muted" 
+      class="progressbar_nav--volume-off" 
       (click)="mute()">
     </div>
 
     <div 
-      *ngIf="!currentAudio.muted" class="progressbar_nav--volume-on" 
-      (click)="mute()">
+      *ngIf="!currentAudio.muted" 
+      (click)="mute()"
+      class="progressbar_nav--volume-on">
+      
     </div>
   </div>
 </footer>
