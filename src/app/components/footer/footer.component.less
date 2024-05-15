@@ -1,0 +1,92 @@
+footer {
+    display: flex;
+
+    .song-number {
+        background-color: rgb(255, 255, 255);
+        border-radius: 25px;
+        text-align: center;
+        font-size: 45px;
+        font-weight: 800;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 188px;
+        height: 89px;
+
+        &--current {
+            position: absolute;
+            left: 35px;
+            top: -5px;
+        }
+
+        &--total {
+            position: absolute;
+            left: 90px;
+            top: 25px;
+        }
+    }
+
+    .progressbar {
+        text-align: center;
+        font-size: 45px;
+        position: absolute;
+        height: 89px;
+        bottom: 0;
+        right: 0;
+        width: 80%;
+        height: 89px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 25px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &--timer {
+            text-align: center;
+            font-size: 25px;
+            font-weight: 600;
+            position: relative;
+            bottom: 0;
+            right: 0;
+            width: 90px;
+        }
+
+        &--timeline {
+            position: relative;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 1px;
+        }
+
+        &_nav--options {
+            margin-left: 20px;
+            width: 19px;
+            height: 14px;
+            background-image: url(./../../../assets/img/SmallMenu.png);
+            cursor: pointer;
+        }
+
+        &_nav--volume-on {
+            margin-left: 20px;
+            margin-right: 20px;
+            width: 30px;
+            height: 30px;
+            background-image: url(./../../../assets/img/Voice.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        &_nav--volume-off {
+            margin-left: 20px;
+            margin-right: 20px;
+            width: 30px;
+            height: 30px;
+            background-image: url(./../../../assets/img/VoiceOff.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+<footer>
+  <div class="song-number">
+    <div class="song-number--current">
+      {{ this.playlist.indexOf(this.currentSong) + 1 | setLeadingZero }}
+    </div>
+
+    <div 
+      class="song-number--total">{{ playlist.length | setLeadingZero }}
+    </div>
+  </div>
+
+  <div class="progressbar">
+    <div class="progressbar--timer">
+      <p>
+        {{ currentTimeFormated(currentAudio) }}
+      </p>
+    </div>
+
+    <input
+      type="range"
+      (input)="timeSetSlider($event)"
+      value="{{ value }}"
+      min="0"
+      max="{{ currentAudio.duration }}"
+      class="progressbar--timeline"
+    />
+
+    <div 
+      class="progressbar--timer" *ngIf="currentAudio.duration">
+      <p>
+        {{ currentDurationFormated(currentAudio) }}
+      </p>
+    </div>
+
+    <div 
+      class="progressbar_nav--options" (click)="modalService.open()">
+    </div>
+
+    <div 
+      *ngIf="currentAudio.muted" class="progressbar_nav--volume-off" 
+      (click)="mute()">
+    </div>
+
+    <div 
+      *ngIf="!currentAudio.muted" class="progressbar_nav--volume-on" 
+      (click)="mute()">
+    </div>
+  </div>
+</footer>

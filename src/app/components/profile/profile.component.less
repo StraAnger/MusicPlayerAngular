@@ -1,0 +1,68 @@
+.profile {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+
+    h1{
+        font-weight: 600;
+    }
+
+    &--picture {
+        width: 200px;
+        height: 200px;
+        background-image: url(./../../../assets/img/Profile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    table {
+        margin: 20px 0 20px 0;
+    }
+
+    td {
+        width: 100px;
+        text-align: center;
+        font-size: large;
+    }
+
+    button {
+        margin-top: 10px;
+        width: 212px;
+        height: 50px;
+        border: 1px solid #d3afaf;
+        border-radius: 25px;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+        background-color: #fff;
+    }
+
+    &--decoration-blue-spot {
+        position: absolute;
+        left: -415px;
+        bottom: 0;
+        width: 730px;
+        height: 609px;
+        background-image: url(./../../../assets/img/Group1.png);
+        box-shadow: -156px 392px 197px #ffffff inset;
+        z-index: -1;
+        filter: blur(10px);
+    }
+
+    &--decoration-pink-spot {
+        position: absolute;
+        right: 0;
+        top: -337px;
+        width: 510px;
+        height: 609px;
+        background-image: url(./../../../assets/img/Group4.png);
+        box-shadow: 25px 25px 50px 0 white inset, 266px -104px 114px 0 white inset;
+        z-index: -1;
+        filter: blur(10px);
+    }
+}

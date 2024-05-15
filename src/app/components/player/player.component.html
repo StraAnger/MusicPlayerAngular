@@ -1,0 +1,90 @@
+<h1>
+  {{ currentSong.album }}
+</h1>
+
+<div class="main-block">
+  <div class="main-block--decration-previous">
+
+  </div>
+
+  <div class="main-player">
+    <div class="main-player-body">
+      <div 
+        *ngIf="!isShowPictures" 
+        class="main-player-body--decoration-player-pic" 
+        (click)="showPic()">
+      </div>
+
+      <img 
+        *ngIf="isShowPictures" 
+        class="main-player-body--decoration-player-pic" 
+        (click)="showPic()" 
+        src = {{currentSong.image}}/>
+        
+      <div class="main-player-body_nav">
+        <div 
+          class="main-player-body_nav--prevBtn" 
+          (click)="prev()">
+        </div>
+
+        <div 
+          *ngIf="!audio.paused" 
+          class="main-player-body_nav--stopBtn" 
+          (click)="pause()">
+        </div>
+
+        <div
+          *ngIf="audio.paused"
+          class="main-player-body_nav--playBtn"
+          (click)="play(currentSong)">
+        </div>
+
+        <div 
+          class="main-player-body_nav--nextBtn" 
+          (click)="next()">
+        </div>
+      </div>
+    </div>
+
+    <div class="main-player-songs">
+      <p 
+        *ngIf="isLoading">
+        Loading.....
+      </p>
+
+      <div class="main-player-songs--current">
+        {{ currentSong.artist }}
+      </div>
+
+      <table>
+        <tr>
+          <th>
+
+          </th>
+
+          <th class="main-player-songs--column">
+
+          </th>
+        </tr>
+
+        <tr
+          *ngFor="let item of playlist | filterSongs : term; let i = index"
+          class="main-player-songs--list"
+          (click)="play(item)"
+        >
+          <td>
+            {{ i + 1 }}
+          </td>
+
+          <td>
+            {{ item.title }}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="main-block--decration-next">
+
+  </div>
+</div>

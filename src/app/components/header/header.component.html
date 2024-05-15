@@ -1,0 +1,40 @@
+<div class="header">
+  <div class="header--logo">
+
+  </div>
+  <div>
+    <div class="header_nav--search-sign">
+
+    </div>
+    <input
+      type="text"
+      placeholder="Search for songs"
+      class="header_nav--search"
+      [(ngModel)]="term"
+    />
+
+  </div>
+
+  <div 
+    class="header_nav--premium" (click)="modalService.open()">
+    Explore premium
+  </div>
+
+  <div class="header_navbar">
+    <div 
+      class="header_navbar--settings" (click)="modalService.open()">
+    </div>
+
+    <div 
+      class="header_navbar--notifications" (click)="modalService.open()">
+    </div>
+
+    <div 
+      class="header_navbar--profile" routerLink="/profile">
+    </div>
+
+    <div 
+      class="header_navbar--options" (click)="modalService.open()">
+    </div>
+  </div>
+</div>

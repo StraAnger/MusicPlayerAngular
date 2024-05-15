@@ -1,0 +1,36 @@
+<app-header #outputHeader>
+
+</app-header>
+
+<main class="main">
+  <div 
+    class="main--decoration-blue-spot">
+  </div>
+
+  <app-player
+    [playlist]="playlist"
+    [currentSong]="playlist[0]"
+    [isLoading]="isLoading"
+    [term]="outputHeader.term"
+    #outputPlayer>
+  </app-player>
+
+  <div 
+    class="main--decoration-pink-spot">
+  </div>
+</main>
+
+<app-footer 
+  [playlist]="playlist" 
+  [currentSong]="outputPlayer.currentSong" 
+  [currentAudio]="outputPlayer.audio">
+</app-footer>
+
+<app-modal 
+  *ngIf="modalService.isVisible$ | async" 
+  title="Demo mode">
+  
+  <app-under-construction>
+
+  </app-under-construction>
+</app-modal>

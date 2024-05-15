@@ -1,0 +1,41 @@
+<div class="profile">
+  <div 
+    class="profile--decoration-blue-spot">
+  </div>
+
+  <h1>
+    %User_name%
+  </h1>
+
+  <div 
+    class="profile--picture" 
+    (click)="isPremium = !isPremium">
+  </div>
+
+  <table>
+    <tr>
+      <td>
+        Subscription level:
+      </td>
+
+      <td 
+        *ngIf="isPremium">
+        Premium!
+      </td>
+
+      <td 
+        *ngIf="!isPremium">
+        Base
+      </td>
+    </tr>
+  </table>
+
+  <button 
+    routerLink="/">
+    Main menu
+  </button>
+
+  <div 
+    class="profile--decoration-pink-spot">
+  </div>
+</div>
